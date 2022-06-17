@@ -1,3 +1,6 @@
+
+#include <Arduino.h>
+
 /**********************************************************************************************************
   STM32 GPSDO v0.05j by André Balsa, March 2022
   GPLV3 license
@@ -210,7 +213,7 @@ char serial_command_buffer_[32];                   // buffer for commands librar
   SerialCommands serial_commands_(&Serial, serial_command_buffer_, sizeof(serial_command_buffer_), "\n", " ");
 #endif // BLUETOOTH
 
-#include <TinyGPS++.h>                             // get library here > http://arduiniana.org/libraries/tinygpsplus/
+#include <TinyGPSPlus.h>                             // get library here > http://arduiniana.org/libraries/tinygpsplus/
 TinyGPSPlus gps;                                   // create the TinyGPS++ object
 
 #include <Wire.h>                                  // Hardware I2C library on STM32
